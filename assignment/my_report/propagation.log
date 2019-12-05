@@ -1,0 +1,32 @@
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019) (preloaded format=xelatex 2019.12.3)  5 DEC 2019 17:32
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**propagation
+(./propagation.tex
+LaTeX2e <2019-10-01>
+
+! LaTeX Error: File `IEEEtran.cls.cls' not found.
+
+Type X to quit or <RETURN> to proceed,
+or enter new name. (Default extension: cls)
+
+Enter file name: 
+./propagation.tex:2: Emergency stop.
+<read *> 
+         
+l.2 ^^M
+       
+*** (cannot \read from terminal in nonstop modes)
+
+ 
+Here is how much of TeX's memory you used:
+ 10 strings out of 493992
+ 151 string characters out of 6161316
+ 59912 words of memory out of 5000000
+ 4503 multiletter control sequences out of 15000+600000
+ 3640 words of font info for 14 fonts, out of 8000000 for 9000
+ 319 hyphenation exceptions out of 8191
+ 10i,0n,8p,42b,10s stack positions out of 5000i,500n,10000p,200000b,80000s
+No pages of output.
