@@ -89,7 +89,7 @@ measured_data_v = [
 % convert cm into m
 distance_v = measured_data_v(:,1);
 
-power_average_v = (measured_data_v(:,2) + measured_data_v(:,3))./2;
+power_average_v = (measured_data_v(:,2) + measured_data_v(:,3))./2-5;
 
 
 % measured data h_h
@@ -180,7 +180,7 @@ measured_data_h  = [
 
 distance_h  = measured_data_h (:,1);
 
-power_average_h  = (measured_data_h (:,2)+measured_data_h(:,3))./2;
+power_average_h  = (measured_data_h (:,2)+measured_data_h(:,3))./2-5;
 
 figure(1)
 plot(distance_v, power_average_v)
@@ -262,7 +262,7 @@ LtriP_44 = -20*log10( 4*pi*dS/l ./ abs( 1 - rc_para_44.*exp( i*phi2 ) ) );
 
 
 %% relative permittivity of the floor  %%
-er = 4.5;
+er = 7.5;
 
 %%%  NORMAL  %%%
 % two-ray interference

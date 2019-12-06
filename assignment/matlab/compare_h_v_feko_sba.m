@@ -163,7 +163,7 @@ figure(1)
 plot(distance_v_feko, power_average_v_feko)
 title('SBA Power figure')
 xlabel('distance m')
-ylabel('Power dBm')
+ylabel('Normalized Power dBm')
 hold on
 plot(distance_h_feko , power_average_h_feko )
 grid on
@@ -260,7 +260,7 @@ measured_data_v = [
 % convert cm into m
 distance_v = measured_data_v(:,1);
 
-power_average_v = (measured_data_v(:,2) + measured_data_v(:,3))./2;
+power_average_v = (measured_data_v(:,2) + measured_data_v(:,3))./2-10;
 
 
 % measured data h_h
@@ -351,7 +351,7 @@ measured_data_h  = [
 
 distance_h  = measured_data_h (:,1);
 
-power_average_h  = (measured_data_h (:,2)+measured_data_h(:,3))./2;
+power_average_h  = (measured_data_h (:,2)+measured_data_h(:,3))./2-10;
 
 plot(distance_v, power_average_v)
 hold on

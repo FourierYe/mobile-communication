@@ -89,7 +89,7 @@ measured_data_v = [
 % convert cm into m
 distance_v = measured_data_v(:,1)./100;
 
-power_average_v = (measured_data_v(:,2) + measured_data_v(:,3))./2;
+power_average_v = (measured_data_v(:,2) + measured_data_v(:,3))./2+10;
 
 
 % measured data h_h
@@ -180,7 +180,7 @@ measured_data_h  = [
 
 distance_h  = measured_data_h (:,1);
 
-power_average_h  = (measured_data_h (:,2)+measured_data_h(:,3))./2;
+power_average_h  = (measured_data_h (:,2)+measured_data_h(:,3))./2+10;
 
 figure(1)
 plot(distance_v, power_average_v)
@@ -261,7 +261,7 @@ LtriP_44 = -20*log10( 4*pi*dS/l ./ abs( 1 - rc_para_44.*exp( i*phi2 ) ) );
 
 
 %% relative permittivity of the floor  %%
-er = 4.5;
+er = 7.5;
 
 %%%  NORMAL  %%%
 % two-ray interference
@@ -303,12 +303,12 @@ LtriPEC_P = -20*log10( 4*pi*dS/l ./ abs( 1 +1.*exp( i*phi2 ) ) );
 
 LtriPEC_N = -20*log10( 4*pi*dS/l ./ abs( 1 -1.*exp( i*phi2 ) ) );
 
-% plot(dS,Lfs-max(Lfs),'k--',dS,LtriP_75-max(LtriP_75),dS,LtriN_75-max(LtriN_75),'LineWidth',2)
-plot(dS,Lfs-max(Lfs),'k--',dS,LtriP_44-max(LtriP_44),dS,LtriN_44-max(LtriN_44),'LineWidth',2)
+plot(dS,Lfs-max(Lfs),'k--',dS,LtriP_75-max(LtriP_75),dS,LtriN_75-max(LtriN_75),'LineWidth',2)
+% plot(dS,Lfs-max(Lfs),'k--',dS,LtriP_44-max(LtriP_44),dS,LtriN_44-max(LtriN_44),'LineWidth',2)
 xlabel('Position (m)')
 ylabel('Normalised power (dB)')
 legend('v-v measured data','h-h measured data','LOS theory','vertical pol','horizontal pol')  % ,'total')
-title('2-ray interference, concrete floor \epsilon_r=4.5')
+title('2-ray interference, moisture floor \epsilon_r=7.5')
 grid on
 axis([0 40 -60 0])
 

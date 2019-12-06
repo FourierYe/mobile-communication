@@ -184,7 +184,7 @@ power_average_h  = (measured_data_h (:,2)+measured_data_h(:,3))./2;
 
 figure(1)
 plot(distance_v, power_average_v)
-title('measured Received Power figure')
+title('Comparison V-V & H-H')
 xlabel('distance m')
 ylabel('Power dBm')
 hold on

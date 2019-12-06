@@ -186,7 +186,7 @@ power_average_no_absorber  = measured_data_no_absorber (:,2);
 
 figure(1)
 plot(distance_v, power_average_v)
-title('measured Received Power figure')
+title('Comparsion with absorber and no-absorber')
 xlabel('distance m')
 ylabel('Power dBm')
 hold on

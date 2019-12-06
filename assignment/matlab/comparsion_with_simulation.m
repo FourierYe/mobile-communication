@@ -89,7 +89,7 @@ measured_data_v = [
 % convert cm into m
 distance_v = measured_data_v(:,1)./100;
 
-power_average_v = (measured_data_v(:,2) + measured_data_v(:,3))./2;
+power_average_v = (measured_data_v(:,2) + measured_data_v(:,3))./2-10;
 
 
 % measured data h_h
@@ -180,13 +180,13 @@ measured_data_h  = [
 
 distance_h  = measured_data_h (:,1);
 
-power_average_h  = (measured_data_h (:,2)+measured_data_h(:,3))./2;
+power_average_h  = (measured_data_h (:,2)+measured_data_h(:,3))./2-10;
 
 figure(1)
 plot(distance_v, power_average_v)
-title('measured Received Power figure')
+title('Comparison measured data and simulation')
 xlabel('distance m')
-ylabel('Power dBm')
+ylabel('Normalised Power dBm')
 hold on
 plot(distance_h , power_average_h )
 grid on
@@ -269,7 +269,7 @@ feko_v_v_data = [
 
 feko_v_v_distance = feko_v_v_data(:,1)./1000;
 
-feko_v_v_power = feko_v_v_data (:,3);
+feko_v_v_power = feko_v_v_data (:,4);
 
 plot(feko_v_v_distance, feko_v_v_power);
 
